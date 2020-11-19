@@ -5,7 +5,7 @@ JHtmlLib is a Java library to retrieve the code of an HTML page.
 **_`! JHtml is in a SNAPSHOT VERSION. You can only get head content to an html page. !`_**
 
 
-## Usage to get all content
+## Usage to get all content of the web page
 
 ```java
 import fr.jhtml.html.req.HTMLHeader;
