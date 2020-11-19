@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 
 public class HTMLHeader {
 
+    private String git = "https://github.com/JourBoon/JHtmlLib";
     private String mUrl;
 
     public HTMLHeader(String url) throws IOException {
@@ -24,8 +25,10 @@ public class HTMLHeader {
         try {
             res = okHttpClient.newCall(req).execute();
             References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got all HTML content of" + this.mUrl + "!");
+            References.logger.log(Level.INFO, "[" + References.NAME + "]: More info on GitHub" + this.git);
         } catch (IOException e) {
            References.logger.log(Level.SEVERE, "[" + References.NAME + "]: Could not get HTML content! Crash report:" + e.getMessage());
+            References.logger.log(Level.INFO, "[" + References.NAME + "]: More info on GitHub" + this.git);
 
         }
 

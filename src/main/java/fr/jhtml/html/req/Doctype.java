@@ -11,13 +11,14 @@ import java.util.logging.Level;
 
 public class Doctype {
 
+    private String git = "https://github.com/JourBoon/JHtmlLib";
     private String mUrl;
 
     public Doctype(String url) throws IOException{
         this.mUrl = url;
         OkHttpClient okHttpClient = new OkHttpClient();
 
-        Request.Builder builder = new Request.Builder().url("https://foutucode.fr/%22");
+        Request.Builder builder = new Request.Builder().url(this.mUrl);
                 Request req = builder.get().build();
 
         Response res = okHttpClient.newCall(req).execute();
@@ -29,6 +30,7 @@ public class Doctype {
             String split = doc.split("<")[1].split(">")[0];
             System.out.println("<" + split + ">");
             References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got Doctype of " + this.mUrl + "!");
+            References.logger.log(Level.INFO, "[" + References.NAME + "]: More info on GitHub" + this.git);
         }
 
     }

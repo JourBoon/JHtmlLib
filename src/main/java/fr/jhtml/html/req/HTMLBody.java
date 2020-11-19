@@ -10,6 +10,7 @@ import java.util.logging.Level;
 
 public class HTMLBody {
 
+    private String git = "https://github.com/JourBoon/JHtmlLib";
     private String mUrl;
 
     public HTMLBody(String url) throws IOException {
@@ -28,6 +29,7 @@ public class HTMLBody {
             String split = body.split("<body")[1].split("</body>")[0];
             System.out.println("<body" + split + "</body>");
             References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got body of " + this.mUrl + "!");
+            References.logger.log(Level.INFO, "[" + References.NAME + "]: More info on GitHub" + this.git);
         }
 
     }
