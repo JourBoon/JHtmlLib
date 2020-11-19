@@ -28,7 +28,7 @@ public class Doctype {
         if (doc.contains("<!DOCTYPE")) {
             String split = doc.split("<")[1].split(">")[0];
             System.out.println("<" + split + ">");
-            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got Doctype of " + this.mUrl);
+            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got Doctype of " + this.mUrl + "!");
         }
 
     }

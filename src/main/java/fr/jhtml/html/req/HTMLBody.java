@@ -27,7 +27,7 @@ public class HTMLBody {
         if (body.contains("<body")) {
             String split = body.split("<body")[1].split("</body>")[0];
             System.out.println("<body" + split + "</body>");
-            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got body of " + this.mUrl);
+            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got body of " + this.mUrl + "!");
         }
 
     }

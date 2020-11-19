@@ -27,7 +27,7 @@ public class HTMLHead {
         if (head.contains("<head")) {
             String split = head.split("<head")[1].split("</head>")[0];
             System.out.println("<head" + split + "</head>");
-            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got head content of " + this.mUrl);
+            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got head content of " + this.mUrl + "!");
         }
 
     }

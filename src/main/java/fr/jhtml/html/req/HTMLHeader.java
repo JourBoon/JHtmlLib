@@ -23,7 +23,7 @@ public class HTMLHeader {
         Response res = null;
         try {
             res = okHttpClient.newCall(req).execute();
-            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got all HTML content");
+            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got all HTML content of" + this.mUrl + "!");
         } catch (IOException e) {
            References.logger.log(Level.SEVERE, "[" + References.NAME + "]: Could not get HTML content! Crash report:" + e.getMessage());
 
