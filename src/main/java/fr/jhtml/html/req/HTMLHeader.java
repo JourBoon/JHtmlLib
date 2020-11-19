@@ -12,8 +12,6 @@ import java.util.logging.Logger;
 public class HTMLHeader {
 
     private String mUrl;
-    private static final Logger HeadLog = Logger.getLogger("HeadLog");
-
 
     public HTMLHeader(String url) throws IOException {
         this.mUrl = url;
@@ -25,9 +23,9 @@ public class HTMLHeader {
         Response res = null;
         try {
             res = okHttpClient.newCall(req).execute();
-            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succefuly got all HTML Header content");
+            References.logger.log(Level.INFO, "[" + References.NAME + "]: Succesfully got all HTML content");
         } catch (IOException e) {
-           References.logger.log(Level.SEVERE, "[" + References.NAME + "]: Could not get HTML Header content! Crash report:");
+           References.logger.log(Level.SEVERE, "[" + References.NAME + "]: Could not get HTML content! Crash report:" + e.getMessage());
 
         }
 
