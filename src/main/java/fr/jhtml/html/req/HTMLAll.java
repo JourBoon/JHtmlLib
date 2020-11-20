@@ -9,12 +9,12 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class HTMLHeader {
+public class HTMLAll {
 
     private String git = "https://github.com/JourBoon/JHtmlLib";
     private String mUrl;
 
-    public HTMLHeader(String url) throws IOException {
+    public HTMLAll(String url) throws IOException {
         this.mUrl = url;
         OkHttpClient okHttpClient = new OkHttpClient();
 
